@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class ATM {
     Scanner sc=new Scanner(System.in);
     private String accountHolderName="sameer";
@@ -44,29 +43,29 @@ class ATM {
     }
 
     public void  checkBalance() {
-        System.out.println("available balance is " +  balance);
+        System.out.println("available balance is: "+  balance);
         displayMenu();
     }
     public void DepositMoney() {
-        System.out.println(" enter the amount you want to deposit");
+        System.out.println(" enter the amount you want to deposit: ");
         int amount=sc.nextInt();
-        System.out.println(" your current deposit" + amount);
+        System.out.println(" your current deposit: " + amount);
         balance+=amount;
-        System.out.println(" after deposit new Balance" + balance);
+        System.out.println(" after deposit new Balance: " + balance);
         displayMenu();
 
     }
     public void WithdrawMoney() {
-        System.out.println(" enter the amount to Withdraw ");
+        System.out.println(" enter the amount to Withdraw: ");
         int Money=sc.nextInt();
         if(balance < Money) {
-            System.out.println("insuffecient balance");
+            System.out.println("insufficient balance");
         }
         else {
-            System.out.println(Money+" with drawn successfully");
+            System.out.println(Money +" rupees withdrawn successfully");
         }
         balance-=Money;
-        System.out.println("availble balance" + balance);
+        System.out.println("available balance: " + balance);
         displayMenu();
     }
     public void Exit() {
@@ -74,7 +73,7 @@ class ATM {
 
     }
 }
-public class GuessNumber{
+public class AtmSimulator{
     public static void main(String[] args) {
         ATM a=new ATM();
         a.validatePin();
